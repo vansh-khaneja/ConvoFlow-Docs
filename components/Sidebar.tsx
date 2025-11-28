@@ -4,6 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+interface SidebarProps {
+  onClose?: () => void;
+}
+
 const navigation = [
   {
     title: "Getting Started",
@@ -58,7 +62,7 @@ const navigation = [
   },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ onClose }: SidebarProps) {
   const pathname = usePathname();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
     new Set(["Getting Started"])
@@ -75,9 +79,9 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-[var(--sidebar-bg)] border-r border-[var(--border-color)] flex flex-col h-screen sticky top-0">
-      <div className="px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+    <aside className="w-64 bg-[var(--sidebar-bg)] border-r border-[var(--border-color)] flex flex-col h-screen sticky top-0 lg:sticky">
+      <div className="px-4 py-3 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity" onClick={onClose}>
           <img 
             src="/logo.png" 
             alt="ConvoFlow" 
@@ -90,6 +94,18 @@ export default function Sidebar() {
             Docs
           </span>
         </Link>
+        {/* Close button for mobile */}
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="lg:hidden p-1 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-gray-100 rounded transition-colors"
+            aria-label="Close sidebar"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
       <nav className="flex-1 overflow-y-auto p-4">
         {navigation.map((section) => (
@@ -128,6 +144,7 @@ export default function Sidebar() {
                             ? "bg-gray-100 text-[var(--text-primary)] font-medium"
                             : "text-[var(--text-secondary)] hover:bg-gray-50 hover:text-[var(--text-primary)]"
                         }`}
+                        onClick={onClose}
                       >
                         {item.name}
                       </Link>
