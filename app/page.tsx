@@ -78,7 +78,7 @@ export default function Home() {
 
           {/* Mobile Image - Below Content */}
           <div className="mt-8 lg:hidden">
-            <div className="relative rounded-lg sm:rounded-xl lg:rounded-3xl shadow-2xl w-full overflow-hidden" 
+            <div className="relative rounded-lg sm:rounded-xl lg:rounded-3xl shadow-sm sm:shadow-2xl w-full overflow-hidden" 
                  style={{
                    background: 'linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 100%)',
                    padding: '2px'
@@ -106,7 +106,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       {/* Getting Started Links Section */}
-      <div className="mb-20 pt-8 sm:pt-12 border-t border-gray-200">
+      <div className="hidden sm:block mb-20 pt-8 sm:pt-12 border-t border-gray-200">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
           <div>
             <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-6">

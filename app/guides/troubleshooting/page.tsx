@@ -1,6 +1,6 @@
 export default function Troubleshooting() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
           Guides
@@ -58,13 +58,11 @@ export default function Troubleshooting() {
         <p className="text-[var(--text-primary)] mb-4">
           Use the detailed logs page to inspect workflow execution and debug issues:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/detailed logs page.png" 
-            alt="Detailed logs page showing workflow execution logs" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/detailed logs page.png" 
+          alt="Detailed logs page showing workflow execution logs" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
         <ul className="list-disc pl-6 space-y-2 mb-6 text-[var(--text-primary)]">
           <li>Use the DebugNode to inspect data at different points in your workflow</li>
           <li>Check browser console for frontend errors</li>

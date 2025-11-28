@@ -1,6 +1,6 @@
 export default function BasicChatbot() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full mb-4">
           Examples
@@ -24,13 +24,11 @@ export default function BasicChatbot() {
         <p className="text-[var(--text-primary)] mb-4">
           Here's a basic chatbot flow running in action:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/very basic chabtot flow running.png" 
-            alt="Basic chatbot flow running showing the workflow execution" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/very basic chabtot flow running.png" 
+          alt="Basic chatbot flow running showing the workflow execution" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Step-by-Step Instructions
@@ -103,13 +101,11 @@ ResponseNode Configuration:
         <p className="text-[var(--text-primary)] mb-4">
           You can also start with pre-built templates from the templates page:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/templates page.png" 
-            alt="Templates page showing available workflow templates" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/templates page.png" 
+          alt="Templates page showing available workflow templates" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
         <ol className="list-decimal pl-6 space-y-2 mb-6 text-[var(--text-primary)]">
           <li>Click the "Execute" button</li>
           <li>Watch as the workflow processes:

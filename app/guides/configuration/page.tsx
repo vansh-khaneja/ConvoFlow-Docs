@@ -2,7 +2,7 @@ import CodeBlock from "@/components/CodeBlock";
 
 export default function Configuration() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
           Guides
@@ -26,13 +26,11 @@ export default function Configuration() {
         <p className="text-[var(--text-primary)] mb-4">
           The easiest way to configure API keys is through the ConvoFlow credentials page. This provides a secure interface for managing all your API keys:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/credentals page.png" 
-            alt="Credentials page for configuring API keys" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/credentals page.png" 
+          alt="Credentials page for configuring API keys" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
         <p className="text-[var(--text-primary)] mb-4">
           On the credentials page, you can:
         </p>

@@ -1,6 +1,6 @@
 export default function CustomerSupport() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-4">
           Examples
@@ -25,13 +25,11 @@ export default function CustomerSupport() {
         <p className="text-[var(--text-primary)] mb-4">
           Here's an example of a customer support workflow that handles various customer inquiries:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/customer-support.png" 
-            alt="Customer support bot workflow showing query, intent classification, routing, and response nodes" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/customer-support.png" 
+          alt="Customer support bot workflow showing query, intent classification, routing, and response nodes" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Key Features

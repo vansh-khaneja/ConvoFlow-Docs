@@ -54,7 +54,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
   return (
     <>
       <header className="border-b border-[var(--border-color)] bg-white backdrop-blur-sm sticky top-0 z-50">
-        <div className="px-4 sm:px-6 py-3 flex items-center justify-between">
+        <div className="px-3 sm:px-6 py-3 flex items-center justify-between">
           {/* Left side - Logo and Desktop Nav */}
           <nav className="flex items-center gap-3 flex-1">
             {isHomePage ? (

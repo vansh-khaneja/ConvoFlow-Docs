@@ -240,7 +240,7 @@ export default function NodesPage() {
 
   return (
     <div className="w-full">
-      <div className="max-w-7xl mx-auto px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
           <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-4">

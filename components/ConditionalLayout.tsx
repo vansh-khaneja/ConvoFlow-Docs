@@ -70,7 +70,7 @@ export default function ConditionalLayout({
       <div className="flex-1 flex flex-col min-h-screen w-full lg:w-auto">
         <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
         <div className="flex flex-1 relative">
-          <main className="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+          <main className="flex-1 overflow-y-auto py-6 lg:py-8">
             {children}
           </main>
           {/* Always reserve space for TableOfContents to prevent layout shift */}

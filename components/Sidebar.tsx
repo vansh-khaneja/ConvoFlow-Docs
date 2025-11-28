@@ -87,9 +87,6 @@ export default function Sidebar({ onClose }: SidebarProps) {
             alt="ConvoFlow" 
             className="h-8 w-auto object-contain"
           />
-          <span className="font-semibold text-base text-[var(--text-primary)]">
-            ConvoFlow
-          </span>
           <span className="text-xs text-[var(--text-secondary)] font-medium">
             Docs
           </span>

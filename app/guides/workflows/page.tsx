@@ -1,6 +1,6 @@
 export default function Workflows() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
           Guides
@@ -40,13 +40,11 @@ export default function Workflows() {
         <p className="text-[var(--text-primary)] mb-4">
           Simple sequential processing. Here's an example of a basic workflow with sidebar:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/basic workflow and side bar.png" 
-            alt="Basic workflow with sidebar showing node connections" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/basic workflow and side bar.png" 
+          alt="Basic workflow with sidebar showing node connections" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <h3 className="text-xl font-semibold text-[var(--text-primary)] mt-6 mb-3">
           Conditional Branching
@@ -54,13 +52,11 @@ export default function Workflows() {
         <p className="text-[var(--text-primary)] mb-4">
           Use ConditionalNode to create different paths based on conditions. Here's an example of a condition-based workflow:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/condtion based workflow.png" 
-            alt="Condition-based workflow showing branching logic" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/condtion based workflow.png" 
+          alt="Condition-based workflow showing branching logic" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <h3 className="text-xl font-semibold text-[var(--text-primary)] mt-6 mb-3">
           Parallel Processing
@@ -68,13 +64,11 @@ export default function Workflows() {
         <p className="text-[var(--text-primary)] mb-4">
           Process multiple paths simultaneously and merge results. Here's an example of a parallel workflow:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/parllel workflow.png" 
-            alt="Parallel workflow showing multiple paths processed simultaneously" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/parllel workflow.png" 
+          alt="Parallel workflow showing multiple paths processed simultaneously" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Best Practices

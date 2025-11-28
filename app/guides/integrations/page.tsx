@@ -2,7 +2,7 @@ import CodeBlock from "@/components/CodeBlock";
 
 export default function IntegrationsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
           Guides
@@ -48,13 +48,11 @@ export default function IntegrationsPage() {
         <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
           Configure the Custom API Node with the following parameters. Here's the configuration panel with all available options:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/custom api with config options.png" 
-            alt="Custom API Node configuration panel showing URL, method, headers, and body options" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/custom api with config options.png" 
+          alt="Custom API Node configuration panel showing URL, method, headers, and body options" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <div className="space-y-4 mb-6">
           <div className="border border-gray-200 rounded-lg p-4">
@@ -302,13 +300,11 @@ export default function IntegrationsPage() {
         <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
           Here's how a Custom API Node looks when executing in a workflow:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/custom api flow on excution.png" 
-            alt="Custom API Node executing in a workflow showing request and response flow" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/custom api flow on excution.png" 
+          alt="Custom API Node executing in a workflow showing request and response flow" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
       </section>
 
       {/* Error Handling */}

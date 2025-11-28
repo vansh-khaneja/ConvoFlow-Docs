@@ -2,7 +2,7 @@ import CodeBlock from "@/components/CodeBlock";
 
 export default function NodeConfig() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full mb-4">
           Customization
@@ -26,13 +26,11 @@ export default function NodeConfig() {
         <p className="text-[var(--text-primary)] mb-4">
           Every node has three main configuration components. Here's how node configuration looks in the sidebar:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/nodeconfiguration in sidebar.png" 
-            alt="Node configuration panel in sidebar showing inputs, outputs, and parameters" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/nodeconfiguration in sidebar.png" 
+          alt="Node configuration panel in sidebar showing inputs, outputs, and parameters" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
         <ul className="list-disc pl-6 space-y-2 mb-6 text-[var(--text-primary)]">
           <li><strong>Inputs:</strong> Data received from other nodes or external sources</li>
           <li><strong>Outputs:</strong> Data produced by the node and sent to other nodes</li>

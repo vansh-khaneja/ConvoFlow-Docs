@@ -1,6 +1,6 @@
 export default function IntentRouting() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
           Examples
@@ -25,13 +25,11 @@ export default function IntentRouting() {
         <p className="text-[var(--text-primary)] mb-4">
           Here's an example of an intent-based routing workflow that classifies and routes conversations:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/intent cloassify.png" 
-            alt="Intent-based routing workflow showing query, intent classification, conditional routing, and specialized branches" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/intent cloassify.png" 
+          alt="Intent-based routing workflow showing query, intent classification, conditional routing, and specialized branches" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Key Features

@@ -2,7 +2,7 @@ import CodeBlock from "@/components/CodeBlock";
 
 export default function Deployment() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
           Guides
@@ -44,23 +44,19 @@ docker-compose down`}
         <p className="text-[var(--text-primary)] mb-4">
           Once deployed, you'll see your workflow in the sidebar:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden">
-          <img 
-            src="/deploed workflow in sidebar.png" 
-            alt="Deployed workflow shown in sidebar" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/deploed workflow in sidebar.png" 
+          alt="Deployed workflow shown in sidebar" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
         <p className="text-[var(--text-primary)] mb-4 mt-6">
           The toolbar will also show the deployed status:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-6 overflow-hidden max-w-2xl">
-          <img 
-            src="/toolbar showing deployed.png" 
-            alt="Toolbar showing deployed status" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/toolbar showing deployed.png"
+          alt="Toolbar showing deployed status" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
         <ul className="list-disc pl-6 space-y-2 mb-6 text-[var(--text-primary)]">
           <li><strong>Environment Variables:</strong> Use secure environment variable management</li>
           <li><strong>Database:</strong> Use managed PostgreSQL for production</li>

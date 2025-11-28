@@ -19,6 +19,22 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "ConvoFlow Documentation",
   description: "Build Custom Chatbots with Visual Workflows - Complete Documentation",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/logo.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/logo.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.json",
+  themeColor: "#110F19",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({

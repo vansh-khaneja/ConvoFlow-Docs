@@ -1,6 +1,6 @@
 export default function QuickStart() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
         <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-4">
           Getting Started
@@ -95,16 +95,14 @@ export default function QuickStart() {
           <li>Connect the LanguageModelNode's "response" output to the ResponseNode's "response" input</li>
         </ol>
 
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-lg p-6 mb-6">
-          <h4 className="font-semibold text-[var(--text-primary)] mb-2">Your workflow should look like:</h4>
-          <div className="flex items-center gap-4 text-sm text-[var(--text-secondary)]">
-            <div className="px-4 py-2 bg-blue-100 rounded">QueryNode</div>
-            <span>→</span>
-            <div className="px-4 py-2 bg-green-100 rounded">LanguageModelNode</div>
-            <span>→</span>
-            <div className="px-4 py-2 bg-purple-100 rounded">ResponseNode</div>
-          </div>
-        </div>
+        <p className="text-[var(--text-primary)] mb-4">
+          Your workflow should look like this:
+        </p>
+        <img 
+          src="/basic workflow and side bar.png" 
+          alt="Basic workflow with sidebar showing node connections" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
 
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Step 4: Configure API Keys
@@ -112,13 +110,11 @@ export default function QuickStart() {
         <p className="text-[var(--text-primary)] mb-4">
           If you're using AI services, make sure to configure API keys. Here's the credentials page where you can manage all your API keys:
         </p>
-        <div className="bg-gray-50 border border-[var(--border-color)] rounded-xl p-4 mb-4 overflow-hidden">
-          <img 
-            src="/credentals page.png" 
-            alt="Credentials page for configuring API keys" 
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <img 
+          src="/credentals page.png" 
+          alt="Credentials page for configuring API keys" 
+          className="w-full h-auto rounded-lg mb-6"
+        />
         <ol className="list-decimal pl-6 space-y-2 mb-6 text-[var(--text-primary)]">
           <li>Go to Settings (usually in the top navigation)</li>
           <li>Navigate to "Credentials" or "API Keys"</li>
