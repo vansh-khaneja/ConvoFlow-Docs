@@ -80,15 +80,20 @@ export default function Sidebar({ onClose }: SidebarProps) {
 
   return (
     <aside className="w-64 bg-[var(--sidebar-bg)] border-r border-[var(--border-color)] flex flex-col h-screen sticky top-0 lg:sticky">
-      <div className="px-4 py-3 flex items-center justify-between">
+      <div className="px-4 pt-3 pb-2 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity" onClick={onClose}>
           <img 
             src="/logo.png" 
             alt="ConvoFlow" 
             className="h-8 w-auto object-contain"
           />
-          <span className="text-xs text-[var(--text-secondary)] font-medium">
-            Docs
+          <span className="flex items-center gap-1">
+            <span className="text-sm lg:text-base text-[var(--text-primary)] font-semibold">
+              ConvoFlow
+            </span>
+            <span className="text-xs lg:text-xs text-[var(--text-secondary)] font-medium">
+              Docs
+            </span>
           </span>
         </Link>
         {/* Close button for mobile */}
@@ -104,9 +109,9 @@ export default function Sidebar({ onClose }: SidebarProps) {
           </button>
         )}
       </div>
-      <nav className="flex-1 overflow-y-auto p-4">
+      <nav className="flex-1 overflow-y-auto px-4 pb-4 pt-7">
         {navigation.map((section) => (
-          <div key={section.title} className="mb-4">
+          <div key={section.title} className="mb-4 first:mt-3">
             <button
               onClick={() => toggleSection(section.title)}
               className="w-full flex items-center justify-between text-xs font-semibold text-[var(--text-primary)] mb-2 hover:text-[var(--accent)] transition-colors uppercase tracking-wide"

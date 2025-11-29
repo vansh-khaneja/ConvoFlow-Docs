@@ -55,36 +55,26 @@ export default function Header({ onMenuClick }: HeaderProps) {
     <>
       <header className="border-b border-[var(--border-color)] bg-white backdrop-blur-sm sticky top-0 z-50">
         <div className="px-3 sm:px-6 py-3 flex items-center justify-between">
-          {/* Left side - Logo and Desktop Nav */}
+          {/* Left side - Logo (Mobile) and Desktop Nav */}
           <nav className="flex items-center gap-3 flex-1">
-            {isHomePage ? (
-              <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <img 
-                  src="/logo.png" 
-                  alt="ConvoFlow" 
-                  className="h-7 sm:h-8 w-auto object-contain"
-                />
-                <span className="text-base sm:text-lg text-[var(--text-primary)] font-semibold hidden sm:inline">
+            {/* Logo and Branding - Mobile (all pages) and Desktop (home page only) */}
+            <a href="/" className={`flex items-center gap-2 hover:opacity-80 transition-opacity ${isHomePage ? '' : 'lg:hidden'}`}>
+              <img 
+                src="/logo.png" 
+                alt="ConvoFlow" 
+                className="h-7 w-auto object-contain"
+              />
+              <span className="flex items-center gap-1">
+                <span className="text-base text-[var(--text-primary)] font-semibold">
                   ConvoFlow
                 </span>
-                <span className="text-xs text-[var(--text-secondary)] font-medium hidden md:inline">
+                <span className="text-xs text-[var(--text-secondary)] font-medium">
                   Docs
                 </span>
-              </a>
-            ) : (
-              <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <img 
-                  src="/logo.png" 
-                  alt="ConvoFlow" 
-                  className="h-7 sm:h-8 w-auto object-contain"
-                />
-                <span className="text-base sm:text-lg text-[var(--text-primary)] font-semibold hidden sm:inline">
-                  ConvoFlow
-                </span>
-              </a>
-            )}
+              </span>
+            </a>
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center gap-1 ml-4">
+            <div className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -200,23 +190,6 @@ export default function Header({ onMenuClick }: HeaderProps) {
         }`}
       >
         <div className="bg-white rounded-md sm:rounded-lg shadow-xl border border-gray-200 px-4 py-3 flex items-center gap-3 w-full sm:min-w-[280px] sm:max-w-md">
-          <div className="flex-shrink-0">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-          </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-semibold text-gray-900">Coming Soon</p>
             <p className="text-xs text-gray-600 mt-0.5">This feature is under development</p>

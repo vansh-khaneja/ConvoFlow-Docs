@@ -1,10 +1,12 @@
+import CodeBlock from "@/components/CodeBlock";
+import PageFeedback from "@/components/PageFeedback";
+import SectionBadge from "@/components/SectionBadge";
+
 export default function APIIntegration() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="mb-8">
-        <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
-          Guides
-        </div>
+        <SectionBadge className="mb-4">Guides</SectionBadge>
         <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-4">
           API Integration
         </h1>
@@ -24,11 +26,10 @@ export default function APIIntegration() {
         <p className="text-[var(--text-primary)] mb-4">
           The API is available at:
         </p>
-        <div className="bg-gray-900 rounded-lg p-6 mb-6 overflow-x-auto">
-          <pre className="text-gray-100 text-sm">
-{`http://localhost:8000/api/v1`}
-          </pre>
-        </div>
+        <CodeBlock
+          code={`http://localhost:8000/api/v1`}
+          language="bash"
+        />
 
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Available Endpoints
@@ -44,9 +45,8 @@ export default function APIIntegration() {
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Example: Execute Workflow
         </h2>
-        <div className="bg-gray-900 rounded-lg p-6 mb-6 overflow-x-auto">
-          <pre className="text-gray-100 text-sm">
-{`curl -X POST http://localhost:8000/api/v1/nodes/execute \\
+        <CodeBlock
+          code={`curl -X POST http://localhost:8000/api/v1/nodes/execute \\
   -H "Content-Type: application/json" \\
   -d '{
     "nodes": {
@@ -71,8 +71,8 @@ export default function APIIntegration() {
       {"from": {"node": "lm1", "output": "response"}, "to": {"node": "r1", "input": "response"}}
     ]
   }'`}
-          </pre>
-        </div>
+          language="bash"
+        />
 
         <div className="border-l-4 border-orange-500 pl-6 py-4 bg-orange-50 rounded-r-lg mb-8">
           <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
@@ -109,6 +109,7 @@ export default function APIIntegration() {
             </a>
           </div>
         </section>
+        <PageFeedback />
       </div>
     </div>
   );

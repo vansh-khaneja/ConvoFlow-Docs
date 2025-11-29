@@ -1,12 +1,12 @@
 import CodeBlock from "@/components/CodeBlock";
+import PageFeedback from "@/components/PageFeedback";
+import SectionBadge from "@/components/SectionBadge";
 
 export default function IntegrationsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="mb-8">
-        <div className="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full mb-4">
-          Guides
-        </div>
+        <SectionBadge className="mb-4">Guides</SectionBadge>
         <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-4">
           Connect External Services
         </h1>
@@ -429,6 +429,7 @@ export default function IntegrationsPage() {
         </div>
       </section>
       </div>
+      <PageFeedback />
     </div>
   );
 }

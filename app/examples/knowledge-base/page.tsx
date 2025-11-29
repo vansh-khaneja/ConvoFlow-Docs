@@ -1,10 +1,11 @@
+import PageFeedback from "@/components/PageFeedback";
+import SectionBadge from "@/components/SectionBadge";
+
 export default function KnowledgeBase() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="mb-8">
-        <div className="inline-block px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full mb-4">
-          Examples
-        </div>
+        <SectionBadge className="mb-4">Examples</SectionBadge>
         <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-4">
           Knowledge Base Bot
         </h1>
@@ -49,6 +50,7 @@ export default function KnowledgeBase() {
             Make sure to configure your vector database connection in the KnowledgeBaseRetrievalNode settings.
           </p>
         </div>
+        <PageFeedback />
       </div>
     </div>
   );

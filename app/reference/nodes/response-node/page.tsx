@@ -1,12 +1,12 @@
 import CodeBlock from "@/components/CodeBlock";
+import PageFeedback from "@/components/PageFeedback";
+import SectionBadge from "@/components/SectionBadge";
 
 export default function ResponseNodePage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 xl:pr-0">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 xl:pr-0">
       <div className="mb-8">
-        <div className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-sm font-medium rounded-full mb-4">
-          Reference
-        </div>
+        <SectionBadge className="mb-4">Reference</SectionBadge>
         <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-4">
           ResponseNode
         </h1>
@@ -154,6 +154,7 @@ ResponseNode ← Also receives input from DebugNode
             <li><a href="/reference/nodes/merge-node" className="text-[var(--accent)] hover:underline">MergeNode</a> - Combine multiple outputs</li>
           </ul>
         </div>
+        <PageFeedback />
       </div>
     </div>
   );

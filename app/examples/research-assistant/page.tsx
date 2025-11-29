@@ -1,10 +1,12 @@
+import CodeBlock from "@/components/CodeBlock";
+import PageFeedback from "@/components/PageFeedback";
+import SectionBadge from "@/components/SectionBadge";
+
 export default function ResearchAssistant() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="mb-8">
-        <div className="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full mb-4">
-          Examples
-        </div>
+        <SectionBadge className="mb-4">Examples</SectionBadge>
         <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-4">
           Research Assistant
         </h1>
@@ -68,9 +70,8 @@ export default function ResearchAssistant() {
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Configuration Tips
         </h2>
-        <div className="bg-gray-900 rounded-lg p-6 mb-6 overflow-x-auto">
-          <pre className="text-gray-100 text-sm">
-{`Web Search Configuration:
+        <CodeBlock
+          code={`Web Search Configuration:
   - Configure search API (Google, Bing, etc.)
   - Set number of results to retrieve
   - Filter by date, domain, or language
@@ -89,8 +90,8 @@ Response Generation:
   - Use prompts that emphasize synthesis
   - Include source attribution requirements
   - Configure response length and detail level`}
-          </pre>
-        </div>
+          language="text"
+        />
 
         <h2 className="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
           Best Practices
@@ -113,6 +114,7 @@ Response Generation:
             <li><a href="/guides/workflows" className="text-[var(--accent)] hover:underline">Workflow Patterns</a></li>
           </ul>
         </div>
+        <PageFeedback />
       </div>
     </div>
   );

@@ -1,12 +1,12 @@
 import CodeBlock from "@/components/CodeBlock";
+import PageFeedback from "@/components/PageFeedback";
+import SectionBadge from "@/components/SectionBadge";
 
 export default function Installation() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="mb-8">
-        <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-4">
-          Getting Started
-        </div>
+        <SectionBadge className="mb-4">Getting Started</SectionBadge>
         <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-4">
           Installation
         </h1>
@@ -167,6 +167,7 @@ npm run dev:frontend`}
             <li><a href="/guides/workflows" className="text-[var(--accent)] hover:underline">Building Your First Workflow</a></li>
           </ul>
         </div>
+        <PageFeedback />
       </div>
     </div>
   );

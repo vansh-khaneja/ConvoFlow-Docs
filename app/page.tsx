@@ -1,4 +1,6 @@
 import CodeBlock from "@/components/CodeBlock";
+import PageFeedback from "@/components/PageFeedback";
+import SectionBadge from "@/components/SectionBadge";
 
 export default function Home() {
   return (
@@ -9,9 +11,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Left Side - Content */}
             <div className="space-y-6 sm:space-y-8 font-[var(--font-plus-jakarta)]">
-              <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-lg sm:rounded-full">
-                Documentation
-              </div>
+              <SectionBadge className="rounded-lg sm:rounded-full">Documentation</SectionBadge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] leading-tight tracking-tight">
                 Build AI workflows with ConvoFlow
               </h1>
@@ -380,34 +380,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Feedback Section */}
-      <div className="mb-20 pt-12 border-t border-gray-200">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-          <span className="text-sm font-medium text-[var(--text-secondary)] whitespace-nowrap">
-            Was this page helpful?
-          </span>
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-            <button className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-gray-200 rounded-md sm:rounded-lg hover:bg-gray-50 transition-colors">
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-              </svg>
-              <span className="whitespace-nowrap">It was helpful</span>
-            </button>
-            <button className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-gray-200 rounded-md sm:rounded-lg hover:bg-gray-50 transition-colors">
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
-              </svg>
-              <span className="whitespace-nowrap">It wasn't helpful</span>
-            </button>
-            <button className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-gray-200 rounded-md sm:rounded-lg hover:bg-gray-50 transition-colors">
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-              <span className="whitespace-nowrap">Report Issue</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      <PageFeedback />
       </div>
     </div>
   );
